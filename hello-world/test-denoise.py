@@ -28,7 +28,7 @@ def main():
     board.prepare_session()
     board.start_stream()
     BoardShim.log_message(LogLevels.LEVEL_INFO.value, 'start sleeping in the main thread')
-    time.sleep(60)
+    time.sleep(120)
     data = board.get_board_data()
     board.stop_stream()
     board.release_session()
@@ -60,8 +60,7 @@ def main():
             DataFilter.perform_wavelet_denoising(data[channel], 'coif3', 3)
             
     df = pd.DataFrame(np.transpose(data))
-    df.to_pickle("Jacob_closed_2")
-    print(data.shape)
+    df.to_pickle("Rena_close_3")
     
     # restored_fft = []
     # for count, channel in enumerate(eeg_channels):
