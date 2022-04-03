@@ -22,7 +22,7 @@ def main():
     # board_id = BoardIds.SYNTHETIC_BOARD.value
     
     board_id = 38
-    params.serial_number = "Muse-6D79"
+    params.serial_number = "Muse-748A"
 
     board = BoardShim(board_id, params)
     board.prepare_session()
@@ -58,9 +58,9 @@ def main():
         elif count == 5:
             # with synthetic board this one looks like the best option, but it depends on many circumstances
             DataFilter.perform_wavelet_denoising(data[channel], 'coif3', 3)
-
+            
     df = pd.DataFrame(np.transpose(data))
-    df.to_pickle("Chris_close_1")
+    df.to_pickle("Jacob_closed_2")
     print(data.shape)
     
     # restored_fft = []
