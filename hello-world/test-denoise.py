@@ -60,7 +60,7 @@ def main():
             DataFilter.perform_wavelet_denoising(data[channel], 'coif3', 3)
             
     df = pd.DataFrame(np.transpose(data))
-    df.to_pickle("Jack_English_3")
+    df.to_pickle("Rena_Korean_3")
     
     # restored_fft = []
     # for count, channel in enumerate(eeg_channels):
